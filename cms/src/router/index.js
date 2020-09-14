@@ -3,13 +3,17 @@ import VueRouter from 'vue-router'
 // 导入登陆组件
 import login from "../components/login.vue";
 import home from "../components/home.vue";
-
+import welcome from "../components/welcome.vue"
 Vue.use(VueRouter)
 
 const routes = [
   { path: '/', redirect: 'login' },
   { path: '/login', component: login },
-  { path: '/home', component: home }
+  {
+    path: '/home', component: home, redirect: '/welcome', children: [
+      { path: '/welcome', component: welcome }
+    ]
+  }
 ]
 
 const router = new VueRouter({
