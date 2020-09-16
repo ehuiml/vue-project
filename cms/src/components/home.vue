@@ -21,7 +21,7 @@
           active-text-color="red"
           :unique-opened="true"
           :default-active="activePath"
-          :router="false"
+          :router="true"
           :collapse="isCollapse"
           :collapse-transition="false"
         >
@@ -131,4 +131,7 @@ export default {
 .el-aside {
   background-color: #333744;
 }
+// .el-main {
+//   background-color: pink;
+// }
 </style>
